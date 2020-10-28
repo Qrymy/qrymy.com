@@ -20,7 +20,8 @@
     "baseUrl": ".",
     "paths": {
       "@models/*": ["src/models/*"],
-      "@helpers/*": ["src/helpers/*"]
+      "@helpers/*": ["src/helpers/*"],
+      "@constants": ["src/constants.ts"]
     }
   },
   "include": [
