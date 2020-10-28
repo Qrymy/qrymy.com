@@ -5,7 +5,6 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Create Next App</title>
-        <link href="/favicon.ico" rel="icon" />
       </Head>
 
       <main>
@@ -55,7 +54,6 @@ export default function Home() {
           target="_blank"
         >
           Powered by{' '}
-          <img alt="Vercel Logo" className="logo" src="/vercel.svg" />
         </a>
       </footer>
 
