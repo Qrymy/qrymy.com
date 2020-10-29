@@ -18,7 +18,7 @@ export const getArticleBySlug = (slug: string) => {
   const article: Article = {
     slug,
     title: typeof data.title === 'string' ? data.title : '',
-    date: typeof data.date === 'number' ? data.date : '',
+    date: typeof data.date === 'number' ? data.date : Date.now(),
     content,
   }
   return article
