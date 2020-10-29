@@ -16,9 +16,9 @@ export const getArticleBySlug = (slug: string) => {
   const file = fs.readFileSync(path, 'utf8')
   const { data, content } = matter(file)
   const article: Article = {
-    slug: typeof data.slug === 'string' ? data.slug : '',
+    slug,
     title: typeof data.title === 'string' ? data.title : '',
-    date: typeof data.date === 'string' ? data.date : '',
+    date: typeof data.date === 'number' ? data.date : Date.now(),
     content,
   }
   return article
