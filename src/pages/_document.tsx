@@ -4,12 +4,7 @@ export default class Document extends Doc {
   render() {
     return (
       <Html>
-        <Head>
-          <link
-            href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
