@@ -6,7 +6,7 @@
     "dev": "next dev -p 7897",
     "build": "next build",
     "start": "next start -p 7897",
-    "lint": "eslint . --fix --max-warnings=0",
+    "lint": "eslint . --fix --max-warnings=0 && stylelint src/**/*.tsx",
     "typecheck": "tsc",
     "prepush": "yarn lint && yarn typecheck"
   },
@@ -32,6 +32,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended": "^3.0.0",
     "typescript": "^4.0.5"
   },
   "husky": {
