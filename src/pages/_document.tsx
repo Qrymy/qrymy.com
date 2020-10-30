@@ -4,7 +4,12 @@ export default class Document extends Doc {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+            href="https://unpkg.com/ress/dist/ress.min.css"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
