@@ -1,4 +1,5 @@
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { Layout } from '@components/layout'
 import { getAllArticles } from '@helpers/file-helpers'
 import { Article } from '@models/article'
 
@@ -13,6 +14,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const IndexPage: NextPage<Props> = ({
   articles: _,
-}: InferGetStaticPropsType<typeof getStaticProps>) => <main />
+}: InferGetStaticPropsType<typeof getStaticProps>) => <Layout></Layout>
 
 export default IndexPage
