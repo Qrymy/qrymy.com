@@ -5,6 +5,7 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import { Layout } from '@components/layout'
+import { ArticleWrapper } from '@components/article-wrapper'
 import { Markdown } from '@components/markdown'
 import { getAllArticles, getArticleBySlug } from '@helpers/file-helpers'
 import { Article } from '@models/article'
@@ -30,7 +31,9 @@ const ArticlePage: NextPage<Props> = ({
   article,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <Layout>
-    <Markdown article={article} />
+    <ArticleWrapper article={article}>
+      <Markdown article={article} />
+    </ArticleWrapper>
   </Layout>
 )
 
