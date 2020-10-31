@@ -25,7 +25,7 @@ const styles = {
     color: ${COLORS.text};
     text-decoration: none;
 
-    &: hover {
+    &:hover {
       text-decoration-line: underline;
     }
   `,
