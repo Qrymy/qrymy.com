@@ -8,7 +8,7 @@ const styles = {
   wrapper: css`
     width: ${SIZES.full};
     height: ${SIZES.full};
-    backgorund-color: ${COLORS.background};
+    background-color: ${COLORS.background};
 
     & > * {
       font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
