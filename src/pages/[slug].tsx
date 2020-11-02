@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import {
   NextPage,
   GetStaticPaths,
@@ -5,6 +6,7 @@ import {
   InferGetStaticPropsType,
 } from 'next'
 import { Layout } from '@components/layout'
+import { Meta } from '@components/meta'
 import { ArticleWrapper } from '@components/article-wrapper'
 import { Markdown } from '@components/markdown'
 import { getAllArticles, getArticleBySlug } from '@helpers/file-helpers'
@@ -30,11 +32,14 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 const ArticlePage: NextPage<Props> = ({
   article,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <Layout>
-    <ArticleWrapper article={article}>
-      <Markdown article={article} />
-    </ArticleWrapper>
-  </Layout>
+  <Fragment>
+    <Meta article={article} />
+    <Layout>
+      <ArticleWrapper article={article}>
+        <Markdown article={article} />
+      </ArticleWrapper>
+    </Layout>
+  </Fragment>
 )
 
 export default ArticlePage

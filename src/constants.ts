@@ -11,3 +11,12 @@ export const FOOTER_NAV = [
 ] as const
 
 export const FOOTER_COPYRIGHT = '(c) Qrymy' as const
+
+export const META = {
+  title: 'Qrymy.com',
+  description: `個人的な趣味や日常的のあれこれをログとして書き残すための場所です。`,
+  url: 'https://qrymy.com',
+  twitter: '@Qrymy',
+  ogImage: 'https://qrymy.com/ogp.png',
+  author: 'Qrymy',
+} as const
