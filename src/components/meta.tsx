@@ -10,10 +10,14 @@ type Props = {
 
 export const Meta: FC<Props> = ({ article }) => {
   const title = article ? `${article.title} - ${META.title}` : META.title
-  const description = article.description || META.description
+  const description = article?.description || META.description
   const url = article ? `${META.url}/${article.slug}` : META.url
 
-  const iso = useMemo(() => getIsoString(article.date), [article.date])
+  const iso = useMemo(() => {
+    if (article) {
+      return getIsoString(article.date)
+    }
+  }, [article])
 
   return (
     <Fragment>
@@ -28,15 +32,17 @@ export const Meta: FC<Props> = ({ article }) => {
           handle: META.twitter,
         }}
       />
-      <BlogJsonLd
-        authorName={META.author}
-        dateModified={iso}
-        datePublished={iso}
-        description={description}
-        images={[]}
-        title={title}
-        url={url}
-      />
+      {article && (
+        <BlogJsonLd
+          authorName={META.author}
+          dateModified={iso}
+          datePublished={iso}
+          description={description}
+          images={[]}
+          title={title}
+          url={url}
+        />
+      )}
     </Fragment>
   )
 }
