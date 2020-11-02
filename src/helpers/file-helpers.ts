@@ -20,14 +20,18 @@ export const getArticleBySlug = (slug: string) => {
     title: typeof data.title === 'string' ? data.title : '',
     date: typeof data.date === 'number' ? data.date : Date.now(),
     content,
+    description: typeof data.description === 'string' ? data.description : null,
+    shouldNotListed:
+      typeof data.shouldNotListed === 'boolean' ? data.shouldNotListed : false,
   }
   return article
 }
 
-export const getAllArticles = () => {
+export const getAllArticles = (showShouldNotListed = false) => {
   const slugs = getArticleSlugs()
   const articles = slugs
     .map((slug) => getArticleBySlug(slug))
+    .filter(({ shouldNotListed }) => !(!showShouldNotListed && shouldNotListed))
     .sort((a, b) => (a.date > b.date ? -1 : 1))
   return articles
 }
