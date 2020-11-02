@@ -15,7 +15,7 @@ type Props = {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = getAllArticles()
+  const articles = getAllArticles(true)
   const paths = articles.map(({ slug }) => `/${slug}`)
 
   return { paths, fallback: false }
