@@ -21,7 +21,7 @@ const styles = {
 
   title: css`
     margin-top: ${SIZES.xs};
-    font-size: ${SIZES.sm};
+    font-size: ${SIZES.md};
     font-weight: normal;
   `,
 
