@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import Image from 'next/image'
 import { css } from 'linaria'
 import MarkdownToJSX, { MarkdownToJSX as MarkdownType } from 'markdown-to-jsx'
 import { WiseLink } from '@components/wise-link'
@@ -99,8 +98,7 @@ const styles = {
 
 export const Markdown: FC<Props> = ({ article }) => {
   const overrides: MarkdownType.Overrides = {
-    img: { component: Image, props: { unsized: true } },
-    a: { component: WiseLink },
+    a: WiseLink,
   }
 
   return (
