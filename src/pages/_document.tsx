@@ -6,10 +6,6 @@ export default class Document extends Doc {
     return (
       <Html>
         <Head>
-          <link
-            href="https://unpkg.com/ress/dist/ress.min.css"
-            rel="stylesheet"
-          />
           <Gtag />
         </Head>
         <body>
