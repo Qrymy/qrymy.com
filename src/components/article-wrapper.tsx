@@ -1,5 +1,4 @@
 import { FC, useMemo } from 'react'
-import { css } from 'linaria'
 import { getIsoString, getReadableDate } from '@helpers/dayjs-helpers'
 import { Article } from '@models/article'
 import { COLORS, SIZES } from '../theme'
@@ -8,27 +7,27 @@ type Props = {
   readonly article: Article
 }
 
-const styles = {
-  container: css`
-    margin: ${SIZES.xl} 0;
-  `,
+// const styles = {
+//   container: css`
+//     margin: ${SIZES.xl} 0;
+//   `,
 
-  header: css`
-    margin-bottom: ${SIZES.xl};
-  `,
+//   header: css`
+//     margin-bottom: ${SIZES.xl};
+//   `,
 
-  time: css`
-    font-size: ${SIZES.sm};
-    color: ${COLORS.text};
-  `,
+//   time: css`
+//     font-size: ${SIZES.sm};
+//     color: ${COLORS.text};
+//   `,
 
-  title: css`
-    margin-top: ${SIZES.xs};
-    font-size: ${SIZES.md};
-    font-weight: normal;
-    color: ${COLORS.primary};
-  `,
-}
+//   title: css`
+//     margin-top: ${SIZES.xs};
+//     font-size: ${SIZES.md};
+//     font-weight: normal;
+//     color: ${COLORS.primary};
+//   `,
+// }
 
 export const ArticleWrapper: FC<Props> = ({ children, article }) => {
   const { iso, readable } = useMemo(() => {
@@ -38,8 +37,8 @@ export const ArticleWrapper: FC<Props> = ({ children, article }) => {
   }, [article.date])
 
   return (
-    <article className={styles.container}>
-      <header className={styles.header}>
+    <article>
+      <header>
         <time className={styles.time} dateTime={iso}>
           {readable}
         </time>
