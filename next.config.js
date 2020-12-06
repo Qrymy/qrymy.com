@@ -1,6 +1,6 @@
-const withCss = require('@zeit/next-css')
+const withLinaria = require('next-linaria')
 
-module.exports = withCss({
+module.exports = withLinaria({
   webpack(config, _options) {
     config.module.rules.push({
       test: /\.tsx$/,
