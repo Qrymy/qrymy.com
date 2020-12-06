@@ -22,7 +22,8 @@
       "@models/*": ["src/models/*"],
       "@helpers/*": ["src/helpers/*"],
       "@constants": ["src/constants.ts"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@/*": ["src/*"],
     }
   },
   "include": [
