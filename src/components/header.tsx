@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { WiseLink } from '@components/wise-link'
-import { HEADER_NAV } from '@constants'
+import { WiseLink } from '@/components/wise-link'
+import { HEADER_NAV } from '@/constants'
 
 export const Header: FC = () => (
   <header className="h-14">

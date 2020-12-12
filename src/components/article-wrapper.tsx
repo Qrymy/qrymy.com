@@ -1,6 +1,6 @@
 import { FC, useMemo } from 'react'
-import { getIsoString, getReadableDate } from '@helpers/dayjs-helpers'
-import { Article } from '@models/article'
+import { getIsoString, getReadableDate } from '@/helpers/dayjs-helpers'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly article: Article

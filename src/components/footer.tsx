@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { WiseLink } from '@components/wise-link'
-import { FOOTER_NAV, FOOTER_COPYRIGHT } from '@constants'
+import { WiseLink } from '@/components/wise-link'
+import { FOOTER_NAV, FOOTER_COPYRIGHT } from '@/constants'
 
 export const Footer: FC = () => {
   return (

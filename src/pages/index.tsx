@@ -1,10 +1,10 @@
 import { Fragment } from 'react'
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
-import { Layout } from '@components/layout'
-import { Meta } from '@components/meta'
-import { ArticleItem } from '@components/article-item'
-import { getAllArticles } from '@helpers/file-helpers'
-import { Article } from '@models/article'
+import { Layout } from '@/components/layout'
+import { Meta } from '@/components/meta'
+import { ArticleItem } from '@/components/article-item'
+import { getAllArticles } from '@/helpers/file-helpers'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly articles: Article[]

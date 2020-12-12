@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import MarkdownToJSX, { MarkdownToJSX as MarkdownType } from 'markdown-to-jsx'
-import { WiseLink } from '@components/wise-link'
-import { Article } from '@models/article'
+import { WiseLink } from '@/components/wise-link'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly article: Article

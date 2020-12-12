@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Header } from '@components/header'
-import { Footer } from '@components/footer'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 export const Layout: FC = ({ children }) => (
   <div className="w-full h-full bg-gray-50">

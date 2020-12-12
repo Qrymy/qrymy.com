@@ -1,7 +1,7 @@
 import { FC, useMemo } from 'react'
-import { WiseLink } from '@components/wise-link'
-import { getIsoString, getReadableDate } from '@helpers/dayjs-helpers'
-import { Article } from '@models/article'
+import { WiseLink } from '@/components/wise-link'
+import { getIsoString, getReadableDate } from '@/helpers/dayjs-helpers'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly article: Article
