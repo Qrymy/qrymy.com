@@ -2,14 +2,6 @@ module.exports = {
   purge: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
   darkMode: false,
   theme: {
-    colors: {
-      primary: {
-        DEFAULT: '#243FFE',
-      },
-      secondary: {
-        DEFAULT: '#E71D36',
-      },
-    },
     extend: {
       colors: {
         gray: {
@@ -21,6 +13,10 @@ module.exports = {
       lineHeight: {
         14: '3.5rem',
       },
+    },
+    textColor: {
+      primary: '#243FFE',
+      secondary: '#E71D36',
     },
   },
   variants: {
