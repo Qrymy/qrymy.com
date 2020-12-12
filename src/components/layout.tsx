@@ -1,37 +1,12 @@
 import { FC } from 'react'
-import { css } from 'linaria'
 import { Header } from '@components/header'
 import { Footer } from '@components/footer'
-import { COLORS, SIZES } from '../theme'
-
-const styles = {
-  wrapper: css`
-    width: ${SIZES.full};
-    height: ${SIZES.full};
-    background-color: ${COLORS.background};
-
-    & > * {
-      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
-        'Hiragino Sans', Meiryo, sans-serif;
-    }
-  `,
-
-  container: css`
-    max-width: ${SIZES.main};
-    margin: 0 auto;
-    padding: ${SIZES.xl} ${SIZES.sm};
-  `,
-
-  content: css`
-    min-height: 80vh;
-  `,
-}
 
 export const Layout: FC = ({ children }) => (
-  <div className={styles.wrapper}>
-    <div className={styles.container}>
+  <div className="w-full h-full bg-gray-50">
+    <div className="max-w-screen-md mx-auto py-10 px-4">
       <Header />
-      <main className={styles.content}>{children}</main>
+      <main className="min-h-screen">{children}</main>
       <Footer />
     </div>
   </div>

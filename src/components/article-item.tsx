@@ -7,32 +7,6 @@ type Props = {
   readonly article: Article
 }
 
-// const styles = {
-//   container: css`
-//     margin: ${SIZES.lg} 0;
-//   `,
-
-//   time: css`
-//     font-size: ${SIZES.sm};
-//     color: ${COLORS.text};
-//   `,
-
-//   title: css`
-//     margin-top: ${SIZES.xs};
-//     font-size: ${SIZES.md};
-//     font-weight: normal;
-//   `,
-
-//   anchor: css`
-//     color: ${COLORS.primary};
-//     text-decoration-line: none;
-
-//     &:hover {
-//       text-decoration-line: underline;
-//     }
-//   `,
-// }
-
 export const ArticleItem: FC<Props> = ({ article }) => {
   const { iso, readable } = useMemo(() => {
     const iso = getIsoString(article.date)
@@ -41,10 +15,17 @@ export const ArticleItem: FC<Props> = ({ article }) => {
   }, [article.date])
 
   return (
-    <article>
-      <time dateTime={iso}>{readable}</time>
-      <h2>
-        <WiseLink href={`/${article.slug}`}>{article.title}</WiseLink>
+    <article className="my-8">
+      <time className="text-base color-gray-900" dateTime={iso}>
+        {readable}
+      </time>
+      <h2 className="mt-3 text-2xl font-normal">
+        <WiseLink
+          className="color-primary-500 no-underline hover:underline"
+          href={`/${article.slug}`}
+        >
+          {article.title}
+        </WiseLink>
       </h2>
     </article>
   )

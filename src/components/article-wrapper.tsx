@@ -1,33 +1,10 @@
 import { FC, useMemo } from 'react'
 import { getIsoString, getReadableDate } from '@helpers/dayjs-helpers'
 import { Article } from '@models/article'
-import { COLORS, SIZES } from '../theme'
 
 type Props = {
   readonly article: Article
 }
-
-// const styles = {
-//   container: css`
-//     margin: ${SIZES.xl} 0;
-//   `,
-
-//   header: css`
-//     margin-bottom: ${SIZES.xl};
-//   `,
-
-//   time: css`
-//     font-size: ${SIZES.sm};
-//     color: ${COLORS.text};
-//   `,
-
-//   title: css`
-//     margin-top: ${SIZES.xs};
-//     font-size: ${SIZES.md};
-//     font-weight: normal;
-//     color: ${COLORS.primary};
-//   `,
-// }
 
 export const ArticleWrapper: FC<Props> = ({ children, article }) => {
   const { iso, readable } = useMemo(() => {
@@ -37,12 +14,14 @@ export const ArticleWrapper: FC<Props> = ({ children, article }) => {
   }, [article.date])
 
   return (
-    <article>
-      <header>
-        <time className={styles.time} dateTime={iso}>
+    <article className="my-8">
+      <header className="mb-8">
+        <time className="text-base color-gray-900" dateTime={iso}>
           {readable}
         </time>
-        <h2 className={styles.title}>{article.title}</h2>
+        <h2 className="mt-3 text-2xl font-normal color-primary-500">
+          {article.title}
+        </h2>
       </header>
       {children}
     </article>
