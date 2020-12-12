@@ -1,57 +1,25 @@
 import { FC } from 'react'
-import { css } from 'linaria'
-import { WiseLink } from '@components/wise-link'
-import { FOOTER_NAV, FOOTER_COPYRIGHT } from '@constants'
-import { COLORS, SIZES } from '../theme'
-
-const styles = {
-  container: css`
-    padding: ${SIZES.md} 0;
-  `,
-
-  list: css`
-    list-style-type: none;
-  `,
-
-  listItem: css`
-    display: inline-block;
-
-    & + li {
-      margin-left: ${SIZES.sm};
-    }
-  `,
-
-  anchor: css`
-    color: ${COLORS.text};
-    text-decoration: none;
-
-    &:hover {
-      text-decoration-line: underline;
-    }
-  `,
-
-  small: css`
-    display: block;
-    font-size: ${SIZES.xs};
-    margin-top: ${SIZES.sm};
-  `,
-}
+import { WiseLink } from '@/components/wise-link'
+import { FOOTER_NAV, FOOTER_COPYRIGHT } from '@/constants'
 
 export const Footer: FC = () => {
   return (
-    <footer className={styles.container}>
+    <footer className="py-6">
       <nav>
-        <ul className={styles.list}>
+        <ul className="list-none  space-x-4">
           {FOOTER_NAV.map(({ label, href }) => (
-            <li className={styles.listItem} key={href}>
-              <WiseLink className={styles.anchor} href={href}>
+            <li className="inline-block" key={href}>
+              <WiseLink
+                className="text-gray-900 no-underline hover:underline"
+                href={href}
+              >
                 {label}
               </WiseLink>
             </li>
           ))}
         </ul>
       </nav>
-      <small className={styles.small}>{FOOTER_COPYRIGHT}</small>
+      <small className="block mt-4 text-xs">{FOOTER_COPYRIGHT}</small>
     </footer>
   )
 }

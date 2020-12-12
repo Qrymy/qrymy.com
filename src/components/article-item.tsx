@@ -1,38 +1,10 @@
 import { FC, useMemo } from 'react'
-import { css } from 'linaria'
-import { WiseLink } from '@components/wise-link'
-import { getIsoString, getReadableDate } from '@helpers/dayjs-helpers'
-import { Article } from '@models/article'
-import { COLORS, SIZES } from '../theme'
+import { WiseLink } from '@/components/wise-link'
+import { getIsoString, getReadableDate } from '@/helpers/dayjs-helpers'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly article: Article
-}
-
-const styles = {
-  container: css`
-    margin: ${SIZES.lg} 0;
-  `,
-
-  time: css`
-    font-size: ${SIZES.sm};
-    color: ${COLORS.text};
-  `,
-
-  title: css`
-    margin-top: ${SIZES.xs};
-    font-size: ${SIZES.md};
-    font-weight: normal;
-  `,
-
-  anchor: css`
-    color: ${COLORS.primary};
-    text-decoration-line: none;
-
-    &:hover {
-      text-decoration-line: underline;
-    }
-  `,
 }
 
 export const ArticleItem: FC<Props> = ({ article }) => {
@@ -43,12 +15,15 @@ export const ArticleItem: FC<Props> = ({ article }) => {
   }, [article.date])
 
   return (
-    <article className={styles.container}>
-      <time className={styles.time} dateTime={iso}>
+    <article className="my-8">
+      <time className="text-base text-gray-900" dateTime={iso}>
         {readable}
       </time>
-      <h2 className={styles.title}>
-        <WiseLink className={styles.anchor} href={`/${article.slug}`}>
+      <h2 className="mt-3 text-2xl font-normal">
+        <WiseLink
+          className="text-primary no-underline hover:underline"
+          href={`/${article.slug}`}
+        >
           {article.title}
         </WiseLink>
       </h2>

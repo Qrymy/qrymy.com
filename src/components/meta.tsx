@@ -1,8 +1,8 @@
 import { FC, Fragment, useMemo } from 'react'
 import { NextSeo, BlogJsonLd } from 'next-seo'
-import { getIsoString } from '@helpers/dayjs-helpers'
-import { Article } from '@models/article'
-import { META } from '@constants'
+import { getIsoString } from '@/helpers/dayjs-helpers'
+import { Article } from '@/types/article'
+import { META } from '@/constants'
 
 type Props = {
   readonly article?: Article

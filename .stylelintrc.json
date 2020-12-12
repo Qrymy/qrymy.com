@@ -1,7 +1,0 @@
-{
-  "extends": [
-    "stylelint-config-recommended",
-    "linaria/stylelint-config"
-  ],
-  "ignoreFiles": ["**/*.md"]
-} 
