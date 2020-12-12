@@ -5,12 +5,12 @@ import {
   GetStaticProps,
   InferGetStaticPropsType,
 } from 'next'
-import { Layout } from '@components/layout'
-import { Meta } from '@components/meta'
-import { ArticleWrapper } from '@components/article-wrapper'
-import { Markdown } from '@components/markdown'
-import { getAllArticles, getArticleBySlug } from '@helpers/file-helpers'
-import { Article } from '@models/article'
+import { Layout } from '@/components/layout'
+import { Meta } from '@/components/meta'
+import { ArticleWrapper } from '@/components/article-wrapper'
+import { Markdown } from '@/components/markdown'
+import { getAllArticles, getArticleBySlug } from '@/helpers/file-helpers'
+import { Article } from '@/types/article'
 
 type Props = {
   readonly article: Article

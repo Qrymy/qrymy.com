@@ -1,44 +1,17 @@
 import { FC } from 'react'
-import { css } from 'linaria'
-import { WiseLink } from '@components/wise-link'
-import { HEADER_NAV } from '@constants'
-import { COLORS, SIZES } from '../theme'
-
-const styles = {
-  container: css`
-    height: ${SIZES['2xl']};
-    line-height: ${SIZES['2xl']};
-  `,
-
-  list: css`
-    list-style-type: none;
-  `,
-
-  listItem: css`
-    display: inline-block;
-
-    & + li {
-      margin-left: ${SIZES.sm};
-    }
-  `,
-
-  anchor: css`
-    color: ${COLORS.text};
-    text-decoration-line: none;
-
-    &:hover {
-      text-decoration-line: underline;
-    }
-  `,
-}
+import { WiseLink } from '@/components/wise-link'
+import { HEADER_NAV } from '@/constants'
 
 export const Header: FC = () => (
-  <header className={styles.container}>
+  <header className="h-14">
     <nav>
-      <ul className={styles.list}>
+      <ul className="list-none leading-14 space-x-4">
         {HEADER_NAV.map(({ label, href }) => (
-          <li className={styles.listItem} key={href}>
-            <WiseLink className={styles.anchor} href={href}>
+          <li className="inline-block" key={href}>
+            <WiseLink
+              className="no-underline hover:underline text-gray-900"
+              href={href}
+            >
               {label}
             </WiseLink>
           </li>

@@ -1,8 +1,8 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { Article } from '@models/article'
-import { DIRECTORY_NAME } from '@constants'
+import { Article } from '@/types/article'
+import { DIRECTORY_NAME } from '@/constants'
 
 const directory = join(process.cwd(), DIRECTORY_NAME)
 
