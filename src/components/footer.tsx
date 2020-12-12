@@ -6,11 +6,11 @@ export const Footer: FC = () => {
   return (
     <footer className="py-6">
       <nav>
-        <ul className="list-none">
+        <ul className="list-none  space-x-4">
           {FOOTER_NAV.map(({ label, href }) => (
-            <li className="inline-block space-x-4" key={href}>
+            <li className="inline-block" key={href}>
               <WiseLink
-                className="color-gray-900 no-underline hover:underline"
+                className="text-gray-900 no-underline hover:underline"
                 href={href}
               >
                 {label}

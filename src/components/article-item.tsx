@@ -16,12 +16,12 @@ export const ArticleItem: FC<Props> = ({ article }) => {
 
   return (
     <article className="my-8">
-      <time className="text-base color-gray-900" dateTime={iso}>
+      <time className="text-base text-gray-900" dateTime={iso}>
         {readable}
       </time>
       <h2 className="mt-3 text-2xl font-normal">
         <WiseLink
-          className="color-primary-500 no-underline hover:underline"
+          className="text-primary no-underline hover:underline"
           href={`/${article.slug}`}
         >
           {article.title}

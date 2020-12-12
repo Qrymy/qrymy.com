@@ -16,10 +16,10 @@ export const ArticleWrapper: FC<Props> = ({ children, article }) => {
   return (
     <article className="my-8">
       <header className="mb-8">
-        <time className="text-base color-gray-900" dateTime={iso}>
+        <time className="text-base text-gray-900" dateTime={iso}>
           {readable}
         </time>
-        <h2 className="mt-3 text-2xl font-normal color-primary-500">
+        <h2 className="mt-3 text-2xl font-normal text-primary">
           {article.title}
         </h2>
       </header>
